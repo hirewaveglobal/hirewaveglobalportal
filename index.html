@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="HireWave helps businesses build offshore teams with top-tier Filipino professionals." />
+  <title>HireWave for Clients — Build Your Dream Team</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --green-main: #1e994f;
+      --green-dark: #166c38;
+      --text-dark: #222;
+      --bg-light: #f9f9f9;
+      --bg-card: #ffffff;
+      --shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg-light);
+      color: var(--text-dark);
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--green-main), var(--green-dark));
+      color: white;
+      text-align: center;
+      padding: 3rem 1rem 2rem;
+      box-shadow: var(--shadow);
+      animation: fadeInDown 1.2s ease;
+    }
+
+    header img {
+      max-width: 110px;
+      margin-bottom: 0.5rem;
+      animation: zoomIn 1.2s ease;
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      margin: 0.3rem 0;
+    }
+
+    header p {
+      font-size: 1rem;
+      letter-spacing: 1px;
+      opacity: 0.9;
+    }
+
+    section {
+      padding: 3rem 1rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      color: var(--green-dark);
+      font-size: 1.8rem;
+      margin-bottom: 0.75rem;
+      border-left: 4px solid var(--green-main);
+      padding-left: 10px;
+    }
+
+    p, li {
+      font-size: 1.05rem;
+    }
+
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 1.5rem;
+      padding: 0.9rem 2rem;
+      background: linear-gradient(135deg, var(--green-main), var(--green-dark));
+      color: white;
+      text-decoration: none;
+      border-radius: 50px;
+      font-weight: 600;
+      transition: transform 0.2s ease, box-shadow 0.3s ease;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(30, 153, 79, 0.4);
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      margin-top: 1.5rem;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+      transition: transform 0.3s ease;
+    }
+
+    img:hover {
+      transform: scale(1.02);
+    }
+
+    blockquote {
+      background-color: #f1f8f3;
+      padding: 1.5rem;
+      border-left: 5px solid var(--green-main);
+      border-radius: 8px;
+      margin: 2rem 0;
+      font-style: italic;
+      box-shadow: var(--shadow);
+    }
+
+    footer {
+      background-color: var(--green-dark);
+      color: white;
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 0.9rem;
+      letter-spacing: 0.5px;
+    }
+
+    .flex-images {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .flex-images img {
+      width: 48%;
+      border-radius: 10px;
+    }
+
+    .hero {
+      text-align: center;
+      background: #ffffff;
+      border-radius: 16px;
+      box-shadow: var(--shadow);
+      padding: 3rem 2rem;
+      margin-top: -2rem;
+      animation: fadeInUp 1.2s ease;
+    }
+
+    /* Floating Hire Now Button */
+    .floating-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: linear-gradient(135deg, var(--green-main), var(--green-dark));
+      color: white;
+      border: none;
+      padding: 0.9rem 1.5rem;
+      border-radius: 50px;
+      box-shadow: 0 8px 20px rgba(30, 153, 79, 0.5);
+      font-weight: 600;
+      cursor: pointer;
+      animation: bounce 2s infinite;
+      z-index: 999;
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes zoomIn {
+      from { opacity: 0; transform: scale(0.8); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      .flex-images img {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <img src="https://i.imgur.com/o7HSFFr.png" alt="HireWave Logo" />
+  <h1>HireWave</h1>
+  <p>EMPOWERING PEOPLE. BUILDING BORDERLESS TEAMS.</p>
+</header>
+
+<section class="hero">
+  <h2>Ride the Wave of Global Talent</h2>
+  <p>Hire top-tier Filipino professionals and scale your business with HireWave — your trusted offshore staffing partner.</p>
+  <img src="https://i.imgur.com/XmYQFh9.png" alt="Remote team collaboration" />
+</section>
+
+<section class="about">
+  <h2>About Us</h2>
+  <ul>
+    <li>End-to-end offshore staffing for U.S. and global companies</li>
+    <li>Recruitment, onboarding, payroll, and HR support</li>
+    <li>Reliable, remote-ready Filipino professionals</li>
+    <li>Transparent pricing and dedicated account management</li>
+  </ul>
+  <a href="https://hirewaveglobal.github.io/clientform/" target="_blank" class="button">Start Hiring</a>
+</section>
+
+<img src="https://i.imgur.com/LKZ0gSY.jpg" alt="Offshore staffing team in action" />
+
+<section class="mission">
+  <h2>Our Mission</h2>
+  <p>To empower businesses to grow globally while providing rewarding careers for Filipino professionals.</p>
+
+  <h2>Our Core Values</h2>
+  <ul>
+    <li>Integrity</li>
+    <li>Excellence</li>
+    <li>Growth</li>
+    <li>Teamwork</li>
+  </ul>
+
+  <div class="flex-images">
+    <img src="https://i.imgur.com/nI30woI.jpg" alt="Global team on couch" />
+    <img src="https://i.imgur.com/xPDWQJT.jpg" alt="Business professionals with world map" />
+  </div>
+
+  <a href="https://hirewaveglobal.github.io/clientform/" target="_blank" class="button">Partner With Us</a>
+</section>
+
+<section class="testimonials">
+  <h2>Testimonials</h2>
+  <blockquote>
+    “We’ve scaled our back office with HireWave’s help. Great communication and reliable talent.”<br>
+    <em>— Operations Director, E-commerce Brand</em>
+  </blockquote>
+</section>
+
+<section class="contact">
+  <h2>Contact Us</h2>
+  <p>Let’s build your dream team together!</p>
+  <p>📍 Head Office: Manila, Philippines</p>
+  <p>📧 Email: <a href="mailto:info@hirewaveglobal.com">info@hirewaveglobal.com</a></p>
+  <p>🌐 Website: <a href="https://www.hirewaveglobal.com" target="_blank">www.hirewaveglobal.com</a></p>
+
+</section>
+
+<footer>
+  <p>&copy; 2025 HireWave Global. All rights reserved.</p>
+</footer>
+
+<!-- Floating Hire Now Button -->
+<button class="floating-btn" onclick="window.location.href='https://hirewaveglobal.github.io/clientform/'">
+  Hire Now
+</button>
+
+</body>
+</html>
