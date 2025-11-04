@@ -23,7 +23,6 @@
       background-color: var(--bg-light);
       color: var(--text-dark);
       line-height: 1.6;
-      scroll-behavior: smooth;
     }
 
     header {
@@ -32,13 +31,12 @@
       text-align: center;
       padding: 3rem 1rem 2rem;
       box-shadow: var(--shadow);
-      animation: fadeInDown 1.2s ease;
     }
 
     header img {
       max-width: 110px;
       margin-bottom: 0.5rem;
-      animation: zoomIn 1.2s ease;
+      animation: fadeIn 1.2s ease;
     }
 
     header h1 {
@@ -68,13 +66,9 @@
       padding-left: 10px;
     }
 
-    p, li {
-      font-size: 1.05rem;
-    }
+    p, li { font-size: 1.05rem; }
 
-    ul, ol {
-      padding-left: 1.5rem;
-    }
+    ul, ol { padding-left: 1.5rem; }
 
     .button {
       display: inline-block;
@@ -102,9 +96,7 @@
       transition: transform 0.3s ease;
     }
 
-    img:hover {
-      transform: scale(1.02);
-    }
+    img:hover { transform: scale(1.02); }
 
     blockquote {
       background-color: #f1f8f3;
@@ -144,59 +136,108 @@
       box-shadow: var(--shadow);
       padding: 3rem 2rem;
       margin-top: -2rem;
-      animation: fadeInUp 1.2s ease;
+    }
+
+    .hero h2 {
+      font-size: 2rem;
+      color: var(--green-main);
+      margin-bottom: 1rem;
     }
 
     /* Floating Hire Now Button */
     .floating-btn {
       position: fixed;
-      bottom: 20px;
-      right: 20px;
+      bottom: 25px;
+      right: 25px;
       background: linear-gradient(135deg, var(--green-main), var(--green-dark));
       color: white;
       border: none;
-      padding: 0.9rem 1.5rem;
       border-radius: 50px;
-      box-shadow: 0 8px 20px rgba(30, 153, 79, 0.5);
+      padding: 1rem 1.8rem;
       font-weight: 600;
+      font-size: 1rem;
       cursor: pointer;
-      animation: bounce 2s infinite;
-      z-index: 999;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+      z-index: 1000;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .floating-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(30, 153, 79, 0.5);
     }
 
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
+    /* Modal Form */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 2000;
+      left: 0; top: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0,0,0,0.5);
+      justify-content: center;
+      align-items: center;
+      padding: 1rem;
     }
-
-    @keyframes fadeInDown {
-      from { opacity: 0; transform: translateY(-20px); }
-      to { opacity: 1; transform: translateY(0); }
+    .modal-content {
+      background: white;
+      border-radius: 16px;
+      max-width: 600px;
+      width: 100%;
+      padding: 2rem;
+      box-shadow: var(--shadow);
+      position: relative;
+      animation: fadeIn 0.3s ease;
+      overflow-y: auto;
+      max-height: 90vh;
     }
-
-    @keyframes zoomIn {
-      from { opacity: 0; transform: scale(0.8); }
-      to { opacity: 1; transform: scale(1); }
+    .modal-content h2 {
+      color: var(--green-dark);
+      margin-bottom: 1rem;
+      text-align: center;
     }
-
-    @keyframes bounce {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-8px); }
+    .close {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      font-size: 1.8rem;
+      cursor: pointer;
+      color: #555;
     }
+    form input, form select, form textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0 15px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+    form button {
+      background: linear-gradient(135deg, var(--green-main), var(--green-dark));
+      color: white;
+      padding: 0.9rem 2rem;
+      border: none;
+      border-radius: 8px;
+      font-weight: 600;
+      width: 100%;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    form button:hover { background: var(--green-dark); }
 
     @media (max-width: 768px) {
-      header h1 {
-        font-size: 2rem;
-      }
-      .flex-images img {
-        width: 100%;
-      }
+      header h1 { font-size: 2rem; }
+      .flex-images img { width: 100%; }
+      .floating-btn { padding: 0.8rem 1.5rem; font-size: 0.9rem; }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
 
 <body>
-
 <header>
   <img src="https://i.imgur.com/o7HSFFr.png" alt="HireWave Logo" />
   <h1>HireWave</h1>
@@ -209,54 +250,17 @@
   <img src="https://i.imgur.com/XmYQFh9.png" alt="Remote team collaboration" />
 </section>
 
-<section class="about">
-  <h2>About Us</h2>
-  <ul>
-    <li>End-to-end offshore staffing for U.S. and global companies</li>
-    <li>Recruitment, onboarding, payroll, and HR support</li>
-    <li>Reliable, remote-ready Filipino professionals</li>
-    <li>Transparent pricing and dedicated account management</li>
-  </ul>
-  <a href="https://hirewaveglobal.github.io/clientform/" target="_blank" class="button">Start Hiring</a>
-</section>
-
-<img src="https://i.imgur.com/LKZ0gSY.jpg" alt="Offshore staffing team in action" />
-
-<section class="mission">
-  <h2>Our Mission</h2>
-  <p>To empower businesses to grow globally while providing rewarding careers for Filipino professionals.</p>
-
-  <h2>Our Core Values</h2>
-  <ul>
-    <li>Integrity</li>
-    <li>Excellence</li>
-    <li>Growth</li>
-    <li>Teamwork</li>
-  </ul>
-
-  <div class="flex-images">
-    <img src="https://i.imgur.com/nI30woI.jpg" alt="Global team on couch" />
-    <img src="https://i.imgur.com/xPDWQJT.jpg" alt="Business professionals with world map" />
-  </div>
-
-  <a href="https://hirewaveglobal.github.io/clientform/" target="_blank" class="button">Partner With Us</a>
-</section>
-
-<section class="testimonials">
-  <h2>Testimonials</h2>
-  <blockquote>
-    “We’ve scaled our back office with HireWave’s help. Great communication and reliable talent.”<br>
-    <em>— Operations Director, E-commerce Brand</em>
-  </blockquote>
-</section>
-
-<section class="contact">
-  <h2>Contact Us</h2>
-  <p>Let’s build your dream team together!</p>
-  <p>📍 Head Office: Manila, Philippines</p>
-  <p>📧 Email: <a href="mailto:info@hirewaveglobal.com">info@hirewaveglobal.com</a></p>
-  <p>🌐 Website: <a href="https://www.hirewaveglobal.com" target="_blank">www.hirewaveglobal.com</a></p>
-
+<!-- Your existing content continues -->
+<section class="how-it-works">
+  <h2>How It Works</h2>
+  <ol>
+    <li>Choose your plan (Full-Time or Part-Time)</li>
+    <li>Submit your request</li>
+    <li>Receive your candidate shortlist</li>
+    <li>Interview and choose your preferred hire</li>
+    <li>Your new offshore staff starts working!</li>
+  </ol>
+  <img src="https://i.imgur.com/BREJpu9.jpg" alt="Recruitment process diagram" />
 </section>
 
 <footer>
@@ -264,9 +268,70 @@
 </footer>
 
 <!-- Floating Hire Now Button -->
-<button class="floating-btn" onclick="window.location.href='https://hirewaveglobal.github.io/clientform/'">
-  Hire Now
-</button>
+<button class="floating-btn" id="openFormBtn">Hire Now</button>
+
+<!-- Modal Form -->
+<div class="modal" id="hireFormModal">
+  <div class="modal-content">
+    <span class="close" id="closeFormBtn">&times;</span>
+    <h2>Hire Now — Submit Your Request</h2>
+    <form action="https://formspree.io/f/mzzklwvb" method="POST">
+      <label>Full Name *</label>
+      <input type="text" name="name" required>
+
+      <label>Email Address *</label>
+      <input type="email" name="email" required>
+
+      <label>Phone Number *</label>
+      <input type="text" name="phone" required>
+
+      <label>Country / Time Zone *</label>
+      <input type="text" name="country" required>
+
+      <label>Position you want to hire for *</label>
+      <select name="position" required>
+        <option value="">Select...</option>
+        <option>Executive Admin Assistant</option>
+        <option>Graphic Artist</option>
+        <option>HR Specialist</option>
+        <option>Accounting / Audit Associate</option>
+        <option>Social Media Manager</option>
+        <option>Other</option>
+      </select>
+
+      <label>Preferred plan *</label>
+      <select name="plan" required>
+        <option>Full-Time (40 hrs/week) – $1,700/month</option>
+        <option>Part-Time (20 hrs/week) – $850/month</option>
+      </select>
+
+      <label>When would you like your staff to start? *</label>
+      <select name="start_date" required>
+        <option>Immediately</option>
+        <option>Within 2 weeks</option>
+        <option>Within 1 month</option>
+      </select>
+
+      <label>Briefly describe the daily tasks or responsibilities *</label>
+      <textarea name="tasks" rows="3" required></textarea>
+
+      <label>Any specific skills or software your hire should know? *</label>
+      <textarea name="skills" rows="3" required></textarea>
+
+      <button type="submit">Submit Form</button>
+    </form>
+  </div>
+</div>
+
+<script>
+  const openBtn = document.getElementById('openFormBtn');
+  const closeBtn = document.getElementById('closeFormBtn');
+  const modal = document.getElementById('hireFormModal');
+
+  openBtn.addEventListener('click', () => { modal.style.display = 'flex'; });
+  closeBtn.addEventListener('click', () => { modal.style.display = 'none'; });
+  window.addEventListener('click', (e) => { if (e.target === modal) modal.style.display = 'none'; });
+</script>
 
 </body>
 </html>
