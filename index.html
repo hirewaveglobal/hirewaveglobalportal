@@ -91,6 +91,23 @@
       box-shadow: var(--shadow);
     }
 
+    .about {
+      text-align: center;
+      background: white;
+      padding: 3rem 2rem;
+      border-radius: 16px;
+      box-shadow: var(--shadow);
+      margin-top: 3rem;
+    }
+
+    .about img {
+      width: 100%;
+      max-width: 650px;
+      margin-top: 1.5rem;
+      border-radius: 14px;
+      box-shadow: var(--shadow);
+    }
+
     .mission-vision {
       display: flex;
       flex-wrap: wrap;
@@ -105,45 +122,41 @@
       border-radius: 16px;
       box-shadow: var(--shadow);
       transition: transform 0.3s ease;
+      text-align: center;
     }
 
     .mission:hover, .vision:hover {
       transform: translateY(-5px);
     }
 
-    .about {
-      text-align: center;
-      background: white;
-      padding: 3rem 2rem;
-      border-radius: 16px;
+    .mission img, .vision img {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 12px;
+      margin-top: 1rem;
       box-shadow: var(--shadow);
-      margin-top: 3rem;
     }
 
     .gallery {
       margin-top: 3rem;
+      text-align: center;
     }
 
-    .flex-images {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: center;
-    }
-
-    .flex-images img {
-      width: 48%;
+    .gallery img {
+      width: 100%;
+      max-width: 700px;
       border-radius: 12px;
       box-shadow: var(--shadow);
       transition: transform 0.3s ease;
     }
 
-    .flex-images img:hover {
+    .gallery img:hover {
       transform: scale(1.03);
     }
 
     .how-it-works {
       text-align: left;
+      margin-top: 3rem;
     }
 
     footer {
@@ -244,7 +257,6 @@
     @media (max-width: 768px) {
       header h1 { font-size: 2rem; }
       .mission, .vision { flex: 1 1 100%; }
-      .flex-images img { width: 100%; }
       .floating-btn { padding: 0.8rem 1.5rem; font-size: 0.9rem; }
     }
 
@@ -272,24 +284,25 @@
 <section class="about">
   <h2>About HireWave</h2>
   <p>HireWave is a people-first offshore staffing company that connects global businesses with highly skilled Filipino professionals. We help you build long-term, loyal, and productive teams so you can focus on growing your business.</p>
+  <img src="https://imgur.com/LKZ0gSY.png" alt="About HireWave Office" />
 </section>
 
 <section class="mission-vision">
   <div class="mission">
     <h2>Our Mission</h2>
     <p>To empower Filipino professionals by providing global opportunities while helping international clients scale efficiently through reliable offshore staffing solutions.</p>
+    <img src="https://imgur.com/nI30woI.png" alt="Mission Image" />
   </div>
   <div class="vision">
     <h2>Our Vision</h2>
     <p>To be the most trusted offshore staffing partner bridging world-class Filipino talent with businesses worldwide.</p>
+    <img src="https://imgur.com/b9oWrce.png" alt="Vision Image" />
   </div>
 </section>
 
 <section class="gallery">
   <h2>Our Team & Workspace</h2>
-  <div class="flex-images">
-    <img src="https://i.imgur.com/BREJpu9.jpg" alt="HireWave Office" />
-  </div>
+  <img src="https://i.imgur.com/BREJpu9.jpg" alt="HireWave Team" />
 </section>
 
 <section class="how-it-works">
