@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="HireWave helps businesses build offshore teams with top-tier Filipino professionals." />
-  <title>HireWave for Clients — Build Your Dream Team</title>
+  <title>HireWave Global — Build Your Dream Team</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
 
   <style>
@@ -68,53 +68,60 @@
 
     p, li { font-size: 1.05rem; }
 
-    ul, ol { padding-left: 1.5rem; }
-
-    .button {
-      display: inline-block;
-      margin-top: 1.5rem;
-      padding: 0.9rem 2rem;
-      background: linear-gradient(135deg, var(--green-main), var(--green-dark));
-      color: white;
-      text-decoration: none;
-      border-radius: 50px;
-      font-weight: 600;
-      transition: transform 0.2s ease, box-shadow 0.3s ease;
+    .hero {
+      text-align: center;
+      background: #ffffff;
+      border-radius: 16px;
+      box-shadow: var(--shadow);
+      padding: 3rem 2rem;
+      margin-top: -2rem;
+      animation: fadeIn 1s ease;
     }
 
-    .button:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 20px rgba(30, 153, 79, 0.4);
+    .hero h2 {
+      font-size: 2rem;
+      color: var(--green-main);
+      margin-bottom: 1rem;
     }
 
-    img {
+    .hero img {
       max-width: 100%;
-      height: auto;
+      border-radius: 14px;
       margin-top: 1.5rem;
-      border-radius: 12px;
+      box-shadow: var(--shadow);
+    }
+
+    .mission-vision {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      margin-top: 2rem;
+    }
+
+    .mission, .vision {
+      flex: 1 1 45%;
+      background: var(--bg-card);
+      padding: 2rem;
+      border-radius: 16px;
       box-shadow: var(--shadow);
       transition: transform 0.3s ease;
     }
 
-    img:hover { transform: scale(1.02); }
-
-    blockquote {
-      background-color: #f1f8f3;
-      padding: 1.5rem;
-      border-left: 5px solid var(--green-main);
-      border-radius: 8px;
-      margin: 2rem 0;
-      font-style: italic;
-      box-shadow: var(--shadow);
+    .mission:hover, .vision:hover {
+      transform: translateY(-5px);
     }
 
-    footer {
-      background-color: var(--green-dark);
-      color: white;
+    .about {
       text-align: center;
-      padding: 1.5rem;
-      font-size: 0.9rem;
-      letter-spacing: 0.5px;
+      background: white;
+      padding: 3rem 2rem;
+      border-radius: 16px;
+      box-shadow: var(--shadow);
+      margin-top: 3rem;
+    }
+
+    .gallery {
+      margin-top: 3rem;
     }
 
     .flex-images {
@@ -126,22 +133,26 @@
 
     .flex-images img {
       width: 48%;
-      border-radius: 10px;
-    }
-
-    .hero {
-      text-align: center;
-      background: #ffffff;
-      border-radius: 16px;
+      border-radius: 12px;
       box-shadow: var(--shadow);
-      padding: 3rem 2rem;
-      margin-top: -2rem;
+      transition: transform 0.3s ease;
     }
 
-    .hero h2 {
-      font-size: 2rem;
-      color: var(--green-main);
-      margin-bottom: 1rem;
+    .flex-images img:hover {
+      transform: scale(1.03);
+    }
+
+    .how-it-works {
+      text-align: left;
+    }
+
+    footer {
+      background-color: var(--green-dark);
+      color: white;
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 0.9rem;
+      letter-spacing: 0.5px;
     }
 
     /* Floating Hire Now Button */
@@ -178,6 +189,7 @@
       align-items: center;
       padding: 1rem;
     }
+
     .modal-content {
       background: white;
       border-radius: 16px;
@@ -190,11 +202,13 @@
       overflow-y: auto;
       max-height: 90vh;
     }
+
     .modal-content h2 {
       color: var(--green-dark);
       margin-bottom: 1rem;
       text-align: center;
     }
+
     .close {
       position: absolute;
       top: 10px;
@@ -203,6 +217,7 @@
       cursor: pointer;
       color: #555;
     }
+
     form input, form select, form textarea {
       width: 100%;
       padding: 10px;
@@ -211,6 +226,7 @@
       border-radius: 8px;
       font-size: 1rem;
     }
+
     form button {
       background: linear-gradient(135deg, var(--green-main), var(--green-dark));
       color: white;
@@ -222,10 +238,12 @@
       cursor: pointer;
       transition: 0.3s;
     }
+
     form button:hover { background: var(--green-dark); }
 
     @media (max-width: 768px) {
       header h1 { font-size: 2rem; }
+      .mission, .vision { flex: 1 1 100%; }
       .flex-images img { width: 100%; }
       .floating-btn { padding: 0.8rem 1.5rem; font-size: 0.9rem; }
     }
@@ -238,10 +256,11 @@
 </head>
 
 <body>
+
 <header>
   <img src="https://i.imgur.com/o7HSFFr.png" alt="HireWave Logo" />
-  <h1>HireWave</h1>
-  <p>EMPOWERING PEOPLE. BUILDING BORDERLESS TEAMS.</p>
+  <h1>HireWave Global</h1>
+  <p>Empowering People. Building Borderless Teams.</p>
 </header>
 
 <section class="hero">
@@ -250,7 +269,30 @@
   <img src="https://i.imgur.com/XmYQFh9.png" alt="Remote team collaboration" />
 </section>
 
-<!-- Your existing content continues -->
+<section class="about">
+  <h2>About HireWave</h2>
+  <p>HireWave is a people-first offshore staffing company that connects global businesses with highly skilled Filipino professionals. We help you build long-term, loyal, and productive teams so you can focus on growing your business.</p>
+</section>
+
+<section class="mission-vision">
+  <div class="mission">
+    <h2>Our Mission</h2>
+    <p>To empower Filipino professionals by providing global opportunities while helping international clients scale efficiently through reliable offshore staffing solutions.</p>
+  </div>
+  <div class="vision">
+    <h2>Our Vision</h2>
+    <p>To be the most trusted offshore staffing partner bridging world-class Filipino talent with businesses worldwide.</p>
+  </div>
+</section>
+
+<section class="gallery">
+  <h2>Our Team & Workspace</h2>
+  <div class="flex-images">
+    <img src="https://i.imgur.com/BREJpu9.jpg" alt="HireWave Office" />
+    <img src="https://i.imgur.com/hCeOZ3I.jpg" alt="Team Collaboration" />
+  </div>
+</section>
+
 <section class="how-it-works">
   <h2>How It Works</h2>
   <ol>
@@ -260,7 +302,6 @@
     <li>Interview and choose your preferred hire</li>
     <li>Your new offshore staff starts working!</li>
   </ol>
-  <img src="https://i.imgur.com/BREJpu9.jpg" alt="Recruitment process diagram" />
 </section>
 
 <footer>
